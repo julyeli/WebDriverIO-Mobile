@@ -1,0 +1,26 @@
+{
+  "name": "wdio-cucumber",
+  "version": "1.0.0",
+  "description": "framework webdriverio cucumber js to mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julyeli/WebDriverIO-Mobile.git"
+  },
+  "keywords": [
+    "webdriver",
+    "cucumber",
+    "appium",
+    "mobile",
+    "javascript"
+  ],
+  "author": "JulySiles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julyeli/WebDriverIO-Mobile/issues"
+  },
+  "homepage": "https://github.com/julyeli/WebDriverIO-Mobile#readme"
+}
