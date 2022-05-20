@@ -1,26 +1,36 @@
 {
-  "name": "wdio-cucumber",
-  "version": "1.0.0",
-  "description": "framework webdriverio cucumber js to mobile",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/julyeli/WebDriverIO-Mobile.git"
-  },
-  "keywords": [
-    "webdriver",
-    "cucumber",
-    "appium",
-    "mobile",
-    "javascript"
-  ],
-  "author": "JulySiles",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/julyeli/WebDriverIO-Mobile/issues"
-  },
-  "homepage": "https://github.com/julyeli/WebDriverIO-Mobile#readme"
+    "name": "wdio-cucumber",
+    "version": "1.0.0",
+    "description": "framework webdriverio cucumber js to mobile",
+    "main": "index.js",
+    "scripts": {
+        "test": "test",
+        "wdio": "wdio run wdio.conf.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/julyeli/WebDriverIO-Mobile.git"
+    },
+    "keywords": [
+        "webdriver",
+        "cucumber",
+        "appium",
+        "mobile",
+        "javascript"
+    ],
+    "author": "JulySiles",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/julyeli/WebDriverIO-Mobile/issues"
+    },
+    "homepage": "https://github.com/julyeli/WebDriverIO-Mobile#readme",
+    "devDependencies": {
+        "@wdio/appium-service": "^7.19.5",
+        "@wdio/cli": "^7.19.7",
+        "@wdio/cucumber-framework": "^7.19.7",
+        "@wdio/local-runner": "^7.19.7",
+        "@wdio/selenium-standalone-service": "^7.19.5",
+        "@wdio/spec-reporter": "^7.19.7",
+        "appium": "^1.22.3"
+    }
 }
