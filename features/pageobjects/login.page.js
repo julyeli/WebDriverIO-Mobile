@@ -21,6 +21,18 @@ class LoginPage extends Page {
         return $('button[type="submit"]');
     }
 
+    get inpSearch () {
+        return $('#kw');
+    }
+
+    get btnSearch () {
+        return $('.gh-search__submitbtn');
+    }
+
+    get fldResult () {
+        return $('.result-count__count-heading');
+    }
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
@@ -31,6 +43,17 @@ class LoginPage extends Page {
         await this.btnSubmit.click();
     }
 
+    async search (text) {
+        await this.inpSearch.setValue(text);
+        await this.btnSearch.click();
+    }
+
+    async searchTotalResult () {
+        var txt = await this.fldResult.getText();
+        var value = txt.split('+');
+        var totalN = value[0].replace('.','');
+        return totalN
+    }
     /**
      * overwrite specific options to adapt it to page object
      */
