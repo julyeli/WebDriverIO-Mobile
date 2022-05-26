@@ -5,7 +5,12 @@
     "main": "index.js",
     "scripts": {
         "test": "test",
-        "wdio": "wdio run wdio.conf.js"
+        "wdio": "wdio run wdio.conf.js",
+        "code:prettier": "prettier --check \"**/*.js*\"",
+        "report:allure": "npx allure",
+        "report:generate": "report:allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+        "report:open": "report:allure open test-report/allure-report",
+        "android.app": "./node_modules/.bin/wdio ./config/wdio.android.app.conf.js"
     },
     "repository": {
         "type": "git",
@@ -25,12 +30,16 @@
     },
     "homepage": "https://github.com/julyeli/WebDriverIO-Mobile#readme",
     "devDependencies": {
+        "@wdio/allure-reporter": "^7.19.0",
         "@wdio/appium-service": "^7.19.5",
         "@wdio/cli": "^7.19.7",
         "@wdio/cucumber-framework": "^7.19.7",
         "@wdio/local-runner": "^7.19.7",
         "@wdio/selenium-standalone-service": "^7.19.5",
         "@wdio/spec-reporter": "^7.19.7",
-        "appium": "^1.22.3"
+        "appium": "^1.22.3",
+        "allure-commandline": "^2.13.0",
+        "prettier": "^1.19.1",
+        "webdriverio": "^7.19.7"
     }
 }
