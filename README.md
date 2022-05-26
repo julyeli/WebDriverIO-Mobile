@@ -18,6 +18,21 @@ Definición de Objetos de página => ./features/pageobjects/..
 > Las configuraciones especificas para OS Android se encuentran en el archivo de configuración "wdio.android.app.conf.js"
 
 ### Ejecución de pruebas
+```bash
+npm run test
+```
+
+## Otras especificaciones
+### Localización de elementos
+> La estrategia apara usar localizadores en app de Android es usar "accessibilityID", que facilita la creación del script y la ejecución para Android dado que las buenas practicas indican que la mayoria de los elementos de una aplicación debería tener accessibilityID.
+> Si en cambio, necesita usar XPATH porque no tiene ID, y para hacerlo compatible para Android y para iOS, puede usar el siguiente códigoÑ 
+```js
+    const SELECTORS = {
+        WEB_SCREEN: browser.isAndroid
+            ? '*//android.webkit.WebView'
+            : '*//XCUIElementTypeWebView',
+    };
+```
 
 
 ```
